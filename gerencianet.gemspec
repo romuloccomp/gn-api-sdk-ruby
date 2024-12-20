@@ -2,8 +2,8 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "gerencianet/version"
 
-files = `git ls-files -z`.split("\x0").reject do |f|
-  f.match(%r{^(test|spec|features)/}) || f.match(/\.gem$/)
+files = `git ls-files -z`.split('\x0').reject do |f|
+  f.match(%r{^(test|spec|features)/})
 end
 
 Gem::Specification.new do |spec|
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.description   = "A ruby gem for integration of your backend with the
                         payment services provided by Gerencianet"
 
-  spec.homepage      = "http://gerencianet.github.io/gn-api-sdk-ruby"
+  spec.homepage      = "https://github.com/romuloccomp/gn-api-sdk-ruby"
   spec.license       = "MIT"
 
   spec.files         = files
